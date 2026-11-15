@@ -99,7 +99,8 @@ static HRESULT STDMETHODCALLTYPE HookCreateDevice(IDirect3D9* self, UINT adapter
     return hr;
 }
 
-extern "C" __declspec(dllexport) IDirect3D9* WINAPI Direct3DCreate9(UINT sdkVersion)
+// Прокси-функция создания D3D9 (экспортируется через d3d9.def)
+IDirect3D9* WINAPI Direct3DCreate9(UINT sdkVersion)
 {
     if (!g_realD3D9) {
         wchar_t path[MAX_PATH]{};
