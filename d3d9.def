@@ -1,3 +1,6 @@
 EXPORTS
-    Direct3DCreate9=@1
-    D3DPERF_SetMarker=@8
+    Direct3DCreate9 @2
+    D3DPERF_BeginEvent @12
+    D3DPERF_EndEvent @13
+    D3DPERF_GetStatus @15
+    D3DPERF_SetMarker @14
